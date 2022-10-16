@@ -5,23 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <figure>
-            <img src="img/daisy.svg" alt="logo">
-            <h1 class="hidden">daisy paws</h1>
-        </figure>
-        <div>
-            <figure>
-                <img src="img/akar-icons_search.svg" alt="search">
+        <div class="logo-container">
+            <a href="#">
+                <h1 class="hidden">daisy paws</h1>
+                <!-- position absolute,width100% height100%, top0 left0 z-index높게 -->
+            </a>
+            <figure class="header-logo">
+                <img src="img/daisy.svg" alt="">
             </figure>
-            <figure>
-                <img src="img/akar-icons_three-line-horizontal.svg" alt="three-line">
-            </figure>
+        </div>
+        <div class="header-icon">
+            <a href="#">
+                <figure>
+                    <img src="img/akar-icons_search.svg" alt="search">
+                </figure>
+            </a>
+            <a href="#">
+                <figure>
+                    <img src="img/akar-icons_three-line-horizontal.svg" alt="three-line">
+                </figure>
+            </a>
         </div>
     </header>
     <main>
+        <section id="intro-logo">
+            <figure class="flower">
+                <img src="img/flower.svg" alt="logo">
+            </figure>
+            <figure class="letter">
+                <img src="img/letter.svg" alt="logo">
+            </figure>
+        </section>
         <section id="intro">
             <div class="intro-text">
                 <h2>
