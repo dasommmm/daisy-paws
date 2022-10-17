@@ -17,6 +17,8 @@
     font-style: normal;
 }
 
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
 :root{
     --text-black : #3A3A3A;
     --text-white : #fafafa;
@@ -33,10 +35,15 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    /* position: absolute;
-    left: 0;
-    top: 20px; */
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
 
+}
+
+main{
+    background-color: var(--text-white);
 }
 
 .header-logo{
@@ -96,16 +103,32 @@ header{
 
 .flower{
     width: 20vw;
-    height: 20vh;
+    /* height: 20vh; */
     position: absolute;
     left: 12%;
-    top: 40%;
+    top: 47%;
     transform: translateY(-50%);
+}
+
+.move{
+    animation: move 3s infinite alternate;
+    
+}
+
+@keyframes move{
+    from{
+        /* transform: translateY(-150px); */
+        transform: translateY(-50%);
+        
+    }
+    to{
+        transform: translateY(-20%);
+    }
 }
 
 .letter{
     width: 40vw;
-    height: 40vh;
+    /* height: 40vh; */
     position: absolute;
     left: 50%;
     top: 50%;
@@ -117,7 +140,7 @@ header{
 #intro-logo p{
     position: absolute;
     right: 10%;
-    top: 57%;
+    top: 64%;
     font-family: 'SBAggroL';
     font-weight: 300;
     font-size: 36px;
@@ -128,7 +151,6 @@ header{
 
 .bold{
     font-family: 'SBAggroB';
-    font-weight: 700;
     font-size: 36px;
 }
 
@@ -144,7 +166,8 @@ header{
 }
 
 .wrapper{
-    width: 1120px;
+    max-width: 1120px;
+    flex-basis: 1120px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -168,9 +191,12 @@ h2{
 }
 
 .explain{
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 400;
     font-size: 19px;
     line-height: 33px;
     margin-bottom: 90px;
+    color: var(--text-black);
 }
 
 
@@ -200,6 +226,7 @@ h2{
 
 .mockup{
     display: flex;
+    position: relative;
 }
 
 .mockup-png{
@@ -211,7 +238,10 @@ h2{
 }
 
 .mockup-logo{
-    transform: translate(204px, -50px);
+    position: absolute;
+    left: -190px;
+    top: -85px;
+
 }
 
 .mockup-intro{
@@ -273,14 +303,76 @@ h2{
 }
 
 .pink-text li{
-    font-family: 'SBAggroL';
+    font-family: 'NanumSquare', sans-serif;
+    font-weight: 400;
     list-style: disc;
     color: var(--text-black);
-    margin-bottom: 26px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 26px;
+}
+
+
+#trip{
+    padding: 300px 0;
+    position: relative;
+}
+
+.wrapper h3{
+    font-family: 'SBAggroB';
+    font-size: 48px;
+    color: var(--blue);
+    padding-bottom: 65PX;
+}
+
+.explain2{
+    font-family:'nanumsquare';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    margin-bottom: 32px;
+    color: var(--text-black);
+}
+
+.little-bold{
+    font-family:'nanumsquare';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+    color: var(--text-black);
 }
 
 .bubble-wrapper{
     position: absolute;
+}
+
+.bubble{
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2),inset -1px 1px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 23px 23px 23px 0px;
+    background: #ffffff;
+    filter: drop-shadow(-8px 9px 27px rgba(0, 0, 0, 0.2));
+    box-sizing: border-box;
+}
+
+.bubble p{
+    font-family: 'NanumSquare_ac';
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+    line-height: 90px;
+    color: var(--text-black);
+
+}
+
+.bubble:first-of-type{
+    left: 232px;
+    top: -524px;
+}
+
+.bubble:last-of-type{
+    left: -87px;
+    top: -318px;
 }
