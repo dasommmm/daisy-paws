@@ -48,7 +48,7 @@ main{
 
 .header-logo{
     width: 80px;
-    height: 40px;
+
 }
 
 .header-icon{
@@ -180,13 +180,14 @@ main{
     font-size: 40px;
     color: var(--text-black);
     font-family:'SBAggroL';
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 h2{
     font-size: 40px;
     line-height: 66px;
     margin-bottom: 11px;
+    letter-spacing: 0.05em;
     
 }
 
@@ -264,6 +265,7 @@ h2{
     display: flex;
     width: 1120px;
     margin: 0 auto;
+    transform: translateY(-30%);
 
 }
 
@@ -272,7 +274,6 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-120px);
 }
 
 .white-wrapper{
@@ -302,7 +303,7 @@ h2{
 }
 
 .pink-text li{
-    font-family: 'NanumSquare';
+    font-family: 'SBAggroL';
     font-weight: 400;
     list-style: disc;
     color: var(--text-black);
@@ -322,13 +323,15 @@ h2{
     font-size: 48px;
     color: var(--blue);
     padding-bottom: 65PX;
+    letter-spacing: 0.05em;
+    line-height: 79px;
 }
 
 .explain2{
     font-family: 'SBAggroL';
     font-size: 20px;
     line-height: 33px;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
     color: var(--text-black);
     letter-spacing: 0.02em;
 }
@@ -379,6 +382,10 @@ h2{
 
 #get-paws{
     padding: 200px 0;
+}
+
+.br-hidden{
+    display: none;
 }
 
 #review{
@@ -584,8 +591,258 @@ nav a:hover{
 
 @media screen and (max-width: 1239px){
     #intro-logo p{
-        top: 77%;
+        top: 70%;
         font-size : 30px;
     }
+
+    .wrapper{
+        max-width: 770px;
+        flex-basis: 770px;
+    }
     
+    h2{
+        font-size: 32px;
+        line-height: 52px;
+    }
+    
+    .explain{
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 50px;
+    }
+
+    .mockup-png{
+        width: 297px;
+        height: 600px;
+        flex-shrink: 0;
+    }
+
+    .mockup-logo {
+        left: -100px;
+        top: -67px;
+    }
+
+    .download a{
+        width: 250px;
+        height: 70px;
+    }
+
+    #summary{
+        height: 140vh;
+    }
+
+    .pink{
+        height: 70vh;
+    }
+
+    .pink-text h3{
+        text-align: start;
+    }
+
+    .icon-con{
+        flex-direction: column;
+        width: 770px;
+        transform: translateY(-50%);
+        gap: 80px;
+
+    }
+
+    .place,.paw,.community{
+        flex-direction: row;
+        gap: 72px;
+    }
+
+    .white-wrapper{
+        margin: 0;
+    }
+    
+    .wrapper h3{
+        font-size: 32px;
+        line-height: 52px;
+
+    }
+
+    .explain2{
+        font-size: 16px;
+    }
+
+    .little-bold{
+        font-size: 16px;
+    }
+
+    .bubble:first-of-type{
+        left: 115px;
+    }
+    
+    .bubble:last-of-type{
+        left: -34px;
+    }
+
+    .info-icon{
+        max-width: 770px;
+        flex-basis: 770px;
+    }
+
+    .footer-con{
+        max-width: 770px;
+
+    }
+}
+
+@media screen and (max-width: 900px){
+    .header-logo{
+        width: 70px;
+    }
+
+    .header-icon a{
+        margin-left: 10px;
+    }
+    
+    .flower{
+        left: 8%;
+    }
+
+    .letter{
+        width: 50%;
+    }
+
+    #intro-logo{
+        height: 100vh;
+    }
+
+    #intro-logo p{
+        top: 70%;
+        font-size : 20px;
+        line-height: 29px;
+        letter-spacing: 0.15em;
+    }
+
+    #intro-logo .bold{
+        font-size : 20px;
+    }
+
+    #intro{
+        height: 200vh;
+    }
+    
+    #intro .wrapper{
+        transform: translateY(-10%);
+    }
+    
+    .wrapper{
+        flex-direction: column; 
+        justify-content: center; 
+        gap: 50px;
+    }
+
+    h2{
+        font-size: 27px;
+    }
+
+    .intro-text{
+        position: relative;
+    }
+
+    .intro-text .bold{
+        font-size: 27px;
+    }
+
+    .download{
+        position: absolute;
+        top: 815px;
+        
+    }
+
+    .download a{
+        background-color: rgba(151, 179, 243, 0.57);
+    }
+
+    .mockup-logo {
+        left: -44px;
+        top: -41px;
+    }
+
+    .mockup-png{
+        width: 228px;
+        height: 460px;
+    }
+
+    #summary{
+        height: 220vh;
+    }
+
+    .pink{
+        height: 130vh;
+    }
+
+
+    .icon-con{
+        width: 328px;
+        transform: translateY(-40%);
+    }
+
+    .place,.paw,.community{
+        flex-direction: column;
+    }
+
+    .wrapper h3 {
+        font-size: 30px;
+        padding-bottom: 15px;
+        line-height: 49px;
+    }
+
+    .explain2{
+        padding-bottom: 15px;
+    }
+
+    .bubble{
+        width: 160px;
+        height: 70px;
+    }
+
+    .bubble p{
+        line-height: 70px;
+    }
+
+    .bubble:first-of-type {
+        left: 112px;
+        top: -372px;
+    }
+
+    .bubble:last-of-type {
+        left: -44px;
+        top: -245px;
+    }
+
+    #get-paws .wrapper{
+        flex-direction: column-reverse;
+    }
+
+    .br-hidden{
+        display: block;
+    }
+    
+    #more-info{
+        height: 160vh;
+    }
+
+    .more-text{
+        padding-bottom: 100px;
+        font-size: 30px;
+    }
+
+    #more-info figure{
+        width: 67px;
+    }
+
+    .info-icon{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .shopping-icon, .calendar-icon, .domination-icon {
+        width: 134px;
+        height: 150px;
+    }
 }
