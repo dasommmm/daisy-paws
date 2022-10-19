@@ -405,6 +405,7 @@ h2{
 
 #more-info{
     height: 100vh;
+    /* padding-bottom: 100px; */
     background-color: var(--blue-back);
 }
 
@@ -651,7 +652,7 @@ nav a:hover{
 
     .icon-con{
         flex-direction: column;
-        width: 770px;
+        max-width: 770px;
         /* transform: translateY(-50%); */
         gap: 80px;
 
@@ -746,7 +747,8 @@ nav a:hover{
         justify-content: center; 
         gap: 50px;
         /* height: 90%; */
-        /* max-height: 328px; */
+        max-width: 328px;
+        flex-basis: 328px;
     }
 
     h2{
@@ -813,7 +815,8 @@ nav a:hover{
     }
 
     .icon-con{
-        width: 328px;
+        max-width: 328px;
+        flex-basis: 328px;
     }
 
     .place,.paw,.community{
@@ -858,7 +861,8 @@ nav a:hover{
     }
     
     #more-info{
-        height: 130vh;
+        height: fit-content;
+        padding-bottom: 100px;
     }
 
     .more-text{
@@ -874,6 +878,7 @@ nav a:hover{
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        max-width: 328px;
     }
 
     .shopping-icon, .calendar-icon, .domination-icon {
@@ -903,5 +908,10 @@ nav a:hover{
 
     .footer-left {
         padding-bottom: 50px;
+        width: 328px;
+    }
+
+    .footer-right{
+        width: 328px;
     }
 }
