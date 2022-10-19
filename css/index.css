@@ -165,12 +165,18 @@ main{
     display: flex;
 }
 
+
 .wrapper{
     max-width: 1120px;
     flex-basis: 1120px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+
+#intro .wrapper{
     justify-content: space-between;
 }
 
@@ -211,7 +217,7 @@ h2{
     align-items: center;
     margin: 0 auto;
     margin-bottom: 30px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .download a:hover{
@@ -222,6 +228,10 @@ h2{
 .download img{
     width: 149px;
     margin: 0 auto;
+}
+
+.pc-hidden{
+    display: none;
 }
 
 .mockup{
@@ -445,7 +455,7 @@ h2{
     background-color: var(--pink);
     margin-bottom: 26px;
     border-radius: 50px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .shopping-icon:hover,.calendar-icon:hover,.domination-icon:hover{
@@ -457,7 +467,7 @@ h2{
 }
 
 .shopping-svg,.calendar-svg,.domination-svg{
-    transition: 0.5s;
+    transition: 0.3s;
 
 }
 
@@ -466,7 +476,7 @@ h2{
 }
 
 footer{
-    background-color: var(--gray-background);
+    background-color: var(--blue-back);
     font-family: 'NanumSquare';
     font-size: 16px;
     color: var(--text-black);
@@ -494,7 +504,7 @@ nav a{
     opacity: 0.8;
     margin-right: 25px;
     font-size: 16px;    
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 nav a:hover{
@@ -548,11 +558,11 @@ nav a:hover{
 .footer-but{
     width: 150px;
     height: 50px;
-    background-color: rgba(151, 179, 243, 0.57);
+    background-color: var(--text-white);
     border-radius: 25px;
     display: flex;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .footer-but:hover{
@@ -580,7 +590,7 @@ nav a:hover{
     width: 30px;
     height: 30px;
     opacity: 0.9;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .sns figure:hover{
@@ -689,7 +699,7 @@ nav a:hover{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 904px){
     .header-logo{
         width: 70px;
     }
@@ -722,17 +732,21 @@ nav a:hover{
     }
 
     #intro{
-        height: 200vh;
+        height: 150vh;
     }
     
     #intro .wrapper{
-        transform: translateY(-10%);
+        /* transform: translateY(-10%); */
+        justify-content: center;
+        gap: 20px;
     }
     
     .wrapper{
         flex-direction: column; 
         justify-content: center; 
         gap: 50px;
+        /* height: 90%;
+        max-height: 700px; */
     }
 
     h2{
@@ -747,14 +761,16 @@ nav a:hover{
         font-size: 27px;
     }
 
-    .download{
-        position: absolute;
-        top: 815px;
-        
-    }
-
     .download a{
         background-color: rgba(151, 179, 243, 0.57);
+    }
+
+    .mobile-hidden{
+        display: none;
+    }
+
+    .pc-hidden{
+        display: block;
     }
 
     .mockup-logo {
@@ -814,7 +830,7 @@ nav a:hover{
         top: -245px;
     }
 
-    #get-paws .wrapper{
+    #get-paws .wrapper, #safe .wrapper, #domination .wrapper{
         flex-direction: column-reverse;
     }
 
@@ -845,4 +861,6 @@ nav a:hover{
         width: 134px;
         height: 150px;
     }
+
+
 }
