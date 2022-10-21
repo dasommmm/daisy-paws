@@ -32,4 +32,5 @@ function iconUp(){
     const summaryIcon = document.getElementsByClassName('summary-icon')
 
     console.log(iconCon[0].getBoundingClientRect().top)
+    console.log(window.innerHeight)
 }
