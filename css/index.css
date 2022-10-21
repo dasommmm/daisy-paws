@@ -409,6 +409,23 @@ h2{
     background-color: var(--blue-back);
 }
 
+.move-in{
+    transform: translateY(100px);
+    transition: 0.2s;
+}
+
+.move-in:nth-of-type(2){
+    transition-delay: 0.2s;
+}
+
+.move-in:nth-of-type(3){
+    transition-delay: 0.4s;
+}
+
+/* .icon-con:hover .move-in{
+    transform: none;
+} */
+
 
 .more-text{
     font-family: 'SBAggroB';
@@ -871,6 +888,7 @@ nav a:hover{
     #more-info{
         height: fit-content;
         padding-bottom: 100px;
+        background-color: var(--pink-back);
     }
 
     .more-text{

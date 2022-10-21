@@ -1,5 +1,6 @@
 scrollHeader();
 goToTop();
+iconUp();
 
 function scrollHeader(){
     const header = document.getElementsByTagName('header')[0];
@@ -23,4 +24,12 @@ function goToTop(){
         window.scrollTo({top: 0, behavior: 'smooth'});
     });
 
+}
+
+
+function iconUp(){
+    const iconCon = document.getElementsByClassName('icon-con')
+    const summaryIcon = document.getElementsByClassName('summary-icon')
+
+    console.log(iconCon[0].getBoundingClientRect().top)
 }
