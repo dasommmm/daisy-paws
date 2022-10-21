@@ -25,7 +25,8 @@
     --pink : #FBACCC;
     --blue : #6D94F0;
     --icon-gray: #626262;
-    --gray-background : #f0f0f0;
+    /* --gray-background : #f0f0f0; */
+    --gray-background : #E8E8E8;
     --blue-back : #DFE7F7;
     --pink-back : #FFE4F1;
 }
@@ -412,6 +413,7 @@ h2{
 .move-in{
     transform: translateY(100px);
     transition: 0.2s;
+    opacity: 0;
 }
 
 .move-in:nth-of-type(2){
@@ -683,6 +685,19 @@ nav a:hover{
 
     }
 
+    .move-in{
+        transform: translateX(100px);
+        transition: 0.4s;
+    }
+
+    .move-in:nth-of-type(2){
+        transition-delay: 0.4s;
+    }
+    
+    .move-in:nth-of-type(3){
+        transition-delay: 0.8s;
+    }
+
     .place,.paw,.community{
         flex-direction: row;
         gap: 72px;
@@ -927,7 +942,7 @@ nav a:hover{
     }
     
     nav a{
-        font-size: 12px;
+        font-size: 14px;
         margin-right: 10px;
         
     }

@@ -4,5 +4,11 @@
 
 .show {
     transform : none;
-    }
-    
+    opacity: 1;
+}
+
+
+.move-up{
+    transform: translateY(-200px);
+    /* transition: 0.2s; */
+}
