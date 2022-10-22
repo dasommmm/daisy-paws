@@ -69,18 +69,19 @@ function iconUp(){
 }
 
 function moveUp(){
-    const sectionMove = document.getElementsByClassName('section-move');
-    const mockup = document.getElementsByClassName('wrapper');
+    const mockup = document.getElementsByClassName('mockup-png');
+    const moveRight = document.getElementsByClassName('move-right');
 
-    for(let i=0; i<sectionMove.length; i++){
+    for(let i=0; i<mockup.length; i++){
         
         window.addEventListener('scroll', (e)=>{
-            console.log(sectionMove[0].getBoundingClientRect().top);
+            console.log(mockup[i].getBoundingClientRect().top);
 
-            if(sectionMove[0].getBoundingClientRect().top < 0){
-                mockup[i].classList.add('move-up')
+            if(mockup[i].getBoundingClientRect().top - window.innerHeight < 0){
+                mockup[i].classList.add('show')
+
             }else{
-                mockup[i].classList.remove('move-up')
+                mockup[i].classList.remove('show')
             }
         })
     }
