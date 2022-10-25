@@ -117,7 +117,59 @@ function goToTop(){
 // }
 
 
+// ==============================================================
+
 // window.innerWidth가 ~미만일때 이벤트넣기
 // 리사이즈했을때 이너윗스가 ~미만이면 이벤ㅌ 넣고 이상이면 빼기
 
-const 
+// const bgColor = (e) =>{
+//     // const mobileBack = document.getElementsByClassName('mobile-back');
+//     window.addEventListener('resize', (e) =>{
+//         bluePink()
+        
+//         if(window.innerWidth < '904px'){
+//             function bluePink(){
+//                 const mobileBack = document.getElementsByClassName('mobile-back');
+                
+//                 for(let i=0; i<mobileBack.length; i++){
+//                     window.addEventListener('scroll', (e)=>{
+//                         if(mobileBack[1].getBoundingClientRect().top < 0){
+//                             mobileBack[i].classList.add('change')
+//                         }else{
+//                             mobileBack[i].classList.remove('change')
+//                         }
+//                     });
+//                 }
+//             }
+//         }else{
+
+//         }
+//     });
+    
+// }
+
+
+// topBut.addEventListener('click', (e) =>{
+//     window.scrollTo({top: 0, behavior: 'smooth'});
+// });
+
+// header.classList.add('header-hide');
+
+
+bluePink()
+
+function bluePink(){
+    const mobileBack = document.getElementsByClassName('mobile-back');
+    
+    for(let i=0; i<mobileBack.length; i++){
+        window.addEventListener('scroll', (e)=>{
+            if(mobileBack[1].getBoundingClientRect().top < 0){
+                mobileBack[i].classList.add('change')
+            }else{
+                mobileBack[i].classList.remove('change')
+            }
+        });
+    }
+}
+
+

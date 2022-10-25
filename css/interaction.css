@@ -68,7 +68,7 @@
 }    
 
 @media screen and (max-width: 904px){
-    .mobile-back{
+    .change{
         background-color: var(--pink-back);
     }
 }
