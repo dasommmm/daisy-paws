@@ -1,7 +1,35 @@
 scrollHeader();
 goToTop();
-iconUp();
-moveUp();
+// iconUp();
+// moveUp();
+
+
+
+
+makeMove('summary-icon','0.6s');
+makeMove('mockup-png', '0.8s');
+makeMove('move-right', '0.8s');
+
+function makeMove(className,time) {
+    const classContainer = document.getElementsByClassName(className);
+
+    for(let i=0; i<classContainer.length; i++){
+        
+        window.addEventListener('scroll', (e)=>{
+            console.log(classContainer[i].getBoundingClientRect().top);
+
+            if(classContainer[i].getBoundingClientRect().top - window.innerHeight < 0){
+                classContainer[i].classList.add('show')
+                classContainer[i].style.transitionDuration = time;
+                
+            }else{
+                classContainer[i].classList.remove('show')
+                classContainer[i].style.transitionDuration = '0s';
+            }
+        })
+    }
+}
+
 
 function scrollHeader(){
     const header = document.getElementsByTagName('header')[0];
@@ -44,45 +72,52 @@ function goToTop(){
 }
 
 
-function iconUp(){
-    const summary = document.getElementById('summary')
-    const summaryIcon = document.getElementsByClassName('summary-icon')
+// function iconUp(){
+//     const summary = document.getElementById('summary')
+//     const summaryIcon = document.getElementsByClassName('summary-icon')
 
-    // console.log(window.innerHeight)
-    // console.log(iconCon.length)
+//     // console.log(window.innerHeight)
+//     // console.log(iconCon.length)
     
-    for(let i=0; i<summaryIcon.length; i++){ //summaryIcon.length이부분 맞는지
+//     for(let i=0; i<summaryIcon.length; i++){ //summaryIcon.length이부분 맞는지
        
-        window.addEventListener('scroll',(e)=>{
-            // console.log(summary.getBoundingClientRect().top-window.innerHeight/3)
+//         window.addEventListener('scroll',(e)=>{
+//             // console.log(summary.getBoundingClientRect().top-window.innerHeight/3)
 
-            if(summary.getBoundingClientRect().top-window.innerHeight/3<0){
-                summaryIcon[i].classList.add('show');
-            }else{
-                summaryIcon[i].classList.remove('show');
-            }
+//             // if(summary.getBoundingClientRect().top-window.innerHeight/3<0){
+//             if(summaryIcon[i].getBoundingClientRect().top-window.innerHeight<0){
+//                 summaryIcon[i].classList.add('show');
+//             }else{
+//                 summaryIcon[i].classList.remove('show');
+//             }
 
-        })
+//         })
 
-    }
+//     }
 
-}
+// }
 
-function moveUp(){
-    const mockup = document.getElementsByClassName('mockup-png');
-    const moveRight = document.getElementsByClassName('move-right');
+// function moveUp(){
+//     const mockup = document.getElementsByClassName('mockup-png');
+//     const moveRight = document.getElementsByClassName('move-right');
 
-    for(let i=0; i<mockup.length; i++){
+//     for(let i=0; i<mockup.length; i++){
         
-        window.addEventListener('scroll', (e)=>{
-            console.log(mockup[i].getBoundingClientRect().top);
+//         window.addEventListener('scroll', (e)=>{
+//             console.log(mockup[i].getBoundingClientRect().top);
 
-            if(mockup[i].getBoundingClientRect().top - window.innerHeight < 0){
-                mockup[i].classList.add('show')
+//             if(mockup[i].getBoundingClientRect().top - window.innerHeight < 0){
+//                 mockup[i].classList.add('show')
 
-            }else{
-                mockup[i].classList.remove('show')
-            }
-        })
-    }
-}
+//             }else{
+//                 mockup[i].classList.remove('show')
+//             }
+//         })
+//     }
+// }
+
+
+// window.innerWidth가 ~미만일때 이벤트넣기
+// 리사이즈했을때 이너윗스가 ~미만이면 이벤ㅌ 넣고 이상이면 빼기
+
+const 

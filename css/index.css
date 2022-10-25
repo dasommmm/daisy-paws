@@ -926,4 +926,8 @@ nav a:hover{
     .footer-right{
         width: 328px;
     }
+
+    #safe,#calendar,#domination{
+        background-color: var(--blue-back);
+    }
 }
