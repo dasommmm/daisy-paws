@@ -931,4 +931,8 @@ nav a:hover{
         background-color: var(--blue-back);
         transition: 1.5s;
     }
+    .mobile-back2{
+        background-color: var(--blue-back);
+        transition: 1.5s;
+    }
 }
