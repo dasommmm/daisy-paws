@@ -32,7 +32,6 @@
 
 .move-right{
     transform: translateX(-100px);
-    
     opacity: 0;
     transition-delay: 0.5s;
 }
@@ -76,5 +75,5 @@
 .show {
     transform : none;
     opacity: 1;
-    transition: 0.4s;
+    /* transition: 0.4s; */
 }
